@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <header class="topbar">
+      <button class="top-icon" id="resizeBtn" aria-label="Resize">↙↗</button>
+      <div class="top-actions">
+        <button class="top-icon" id="scientificBtn" aria-label="Scientific">√ π<br><span>e =</span></button>
+        <button class="top-icon grid-icon" id="scientificBtn2" aria-label="Calculator modes">▦</button>
+        <button class="top-icon dots" id="menuBtn" aria-label="Menu">⋮</button>
+      </div>
+    </header>
+
+    <section class="display" aria-live="polite">
+      <div class="expression" id="expression">1000 ÷ 8</div>
+      <div class="answer" id="answer">125</div>
+    </section>
+
+    <div class="menu" id="menu">
+      <button id="historyBtn"><span>◴</span> History</button>
+      <button id="settingsBtn"><span>⚙</span> Settings</button>
+    </div>
+
+    <section class="keypad basic" id="basicPad">
+      <button data-action="clear">AC</button>
+      <button data-action="percent">%</button>
+      <button data-action="backspace">⌫</button>
+      <button class="operator" data-value="÷">÷</button>
+
+      <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button class="operator" data-value="×">×</button>
+      <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button class="operator" data-value="−">−</button>
+      <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button class="operator" data-value="+">+</button>
+      <button data-value="00">00</button><button data-value="0">0</button><button data-value=".">.</button><button class="equals" data-action="equals">=</button>
+    </section>
+
+    <section class="keypad scientific hidden" id="scientificPad">
+      <button data-fn="sin">sin</button><button data-fn="cos">cos</button><button data-fn="tan">tan</button>
+      <button data-action="rad">rad</button><button class="mode active" data-action="deg">deg</button>
+
+      <button data-fn="log">log</button><button data-fn="ln">ln</button><button data-value="(">(</button>
+      <button data-value=")">)</button><button data-action="inv">inv</button>
+
+      <button data-action="factorial">!</button><button data-action="clear">AC</button><button data-action="percent">%</button>
+      <button data-action="backspace">⌫</button><button class="operator" data-value="÷">÷</button>
+
+      <button data-value="^">^</button><button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button class="operator" data-value="×">×</button>
+      <button data-action="sqrt">√</button><button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button class="operator" data-value="−">−</button>
+      <button data-value="π">π</button><button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button class="operator" data-value="+">+</button>
+      <button data-value="e">e</button><button data-value="00">00</button><button data-value="0">0</button><button data-value=".">.</button><button class="equals" data-action="equals">=</button>
+    </section>
+
+    <div class="history-panel" id="historyPanel">
+      <div class="panel-head"><b>History</b><button id="closeHistory">×</button></div>
+      <div id="historyList" class="history-list"><p>No calculations yet.</p></div>
+    </div>
+
+    <div class="settings-panel" id="settingsPanel">
+      <div class="panel-head"><b>Settings</b><button id="closeSettings">×</button></div>
+      <label>Theme
+        <select id="themeSelect"><option value="light">Light</option><option value="dark">Dark</option></select>
+      </label>
+      <label>Number format
+        <select id="formatSelect"><option value="auto">Auto</option><option value="fixed2">2 decimals</option><option value="fixed4">4 decimals</option></select>
+      </label>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
