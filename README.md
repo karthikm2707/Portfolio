@@ -17,8 +17,9 @@ A GitHub Pages-ready portfolio built from the information in `Karthik M_Resume.p
 
 1. Create a new GitHub repository, for example `Portfolio-2026`.
 2. Upload everything inside this folder to the repository root.
-3. In GitHub: Settings → Pages → Deploy from branch → `main` → `/root`.
-4. Open the generated GitHub Pages URL.
+3. The repository includes a GitHub Actions workflow for Pages deployment; pushes to `main` trigger deployment.
+4. In GitHub, open **Settings → Pages** and make sure **Source** is set to **GitHub Actions**.
+5. Open the generated GitHub Pages URL.
 
 ## Important
 
